@@ -36,14 +36,14 @@ namespace Fnf_Character_Test_Moddable_Edition
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            WebRequest SiteyeBaglantiTalebi = HttpWebRequest.Create("https://github.com/EmreFnfGithub/versiongith/blob/main/version.txt");
-            WebResponse GelenCevap = SiteyeBaglantiTalebi.GetResponse();
-            StreamReader CevapOku = new StreamReader(GelenCevap.GetResponseStream());
-            string KaynakKodlar = CevapOku.ReadToEnd();
-            int IcerikBaslangicIndex = KaynakKodlar.IndexOf(label1.Text) + 4;
-            int IcerikBitisIndex = KaynakKodlar.Substring(IcerikBaslangicIndex).IndexOf("</td>");
+            WebRequest abcds = HttpWebRequest.Create("https://github.com/EmreFnfGithub/versiongith/blob/main/version.txt");
+            WebResponse hmmcs = abcds.GetResponse();
+            StreamReader readfiles = new StreamReader(hmmcs.GetResponseStream());
+            string hmmabcd = readfiles.ReadToEnd();
+            int start = hmmabcd.IndexOf(label1.Text) + 4;
+            int eend = hmmabcd.Substring(start).IndexOf("</td>");
 
-            label3.Text = (KaynakKodlar.Substring(IcerikBaslangicIndex, IcerikBitisIndex));
+            label3.Text = (hmmabcd.Substring(start, eend));
             Console.Read();
 
             stagelist.Items.AddRange(System.IO.File.ReadAllLines(@"C:\Character Test\assets\stages\stageList.txt"));
